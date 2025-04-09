@@ -1,12 +1,28 @@
 const totalPuestos = 50;
 let vehiculos = [
-    {matricula: '7523MVP', puesto: 1},
-    {matricula: '7488MVP', puesto: 2},
-    {matricula: '7580MVP', puesto: 3},
-    {matricula: '7639MVP', puesto: 4},
-    {matricula: '7462MVP', puesto: 5},
-    {matricula: '3133MVR', puesto: 6},
-    {matricula: 'GY965PV', puesto: 7},
+    {matricula: '1205MVZ', puesto: 1},
+    {matricula: '1465MVZ', puesto: 2},
+    {matricula: '4693MWT', puesto: 3},
+    {matricula: '9065MWR', puesto: 4},
+    {matricula: '8798MWR', puesto: 5},
+    {matricula: '8642MWR', puesto: 6},
+    {matricula: '4527MWT', puesto: 7},
+    {matricula: '8215MWR', puesto: 8},
+    {matricula: '8116MWR', puesto: 9},
+    {matricula: '8695MWR', puesto: 10},
+    {matricula: '8300MWR', puesto: 11},
+    {matricula: '88552MWR',puesto: 12},
+    {matricula: '8593MWR', puesto: 13},
+    {matricula: '8407MWR', puesto: 14},
+    {matricula: '7769MWR', puesto: 15},
+    {matricula: '8887MWR', puesto: 16},
+    {matricula: '1812MYZ', puesto: 17},
+    {matricula: '1900MYZ', puesto: 18},
+    {matricula: '0000***', puesto: 19},
+    {matricula: '6305MDJ', puesto: 20,  
+    {matricula: '9009MDD', puesto: 21},
+    {matricula: '8957MDD', puesto: 22},
+   
 ];
 
 function generarParking() {
