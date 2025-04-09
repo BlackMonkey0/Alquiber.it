@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #ff0000;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #ff0000;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+.busqueda {
+    margin-bottom: 2rem;
+}
+
+.busqueda input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.busqueda button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.busqueda button:hover {
+    background-color: #ff0000;
+}
+
+.parking-lot {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+}
+
+.puesto {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.puesto.ocupado {
+    background-color: #ffcccc;
+    border-color: #ff0000;
+}
+
+.puesto.libre {
+    background-color: #ccffcc;
+    border-color: #00ff00;
+}
+
+.puesto.resaltado {
+    border: 3px solid #ff0000;
+    background-color: #e0f7ff;
+}
+
+.puesto span {
+    font-size: 0.9rem;
+    text-align: center;
+}

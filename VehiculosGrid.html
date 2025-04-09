@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Vehículos</title>
+    <link rel="stylesheet" href="vehiculosgrid.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Vehículos</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="vehiculos.html">Vehículos</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <h2>Registro de Vehículos</h2>
+        <div class="busqueda">
+            <input type="text" id="buscarVehiculo" placeholder="Buscar matrícula...">
+            <button onclick="buscarVehiculo()">Buscar</button>
+        </div>
+        
+        <div class="parking-lot" id="parkingLot"></div>
+    </main>
+
+    <script src="vehiculosGrid.js" defer></script>
+</body>
+</html>

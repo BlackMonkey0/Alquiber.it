@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Vehículos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="VehiculosGrid.html" id="VehiculosGrid">Orden</a></li>
+
+            </ul>
+        </nav>
+
+        <div id="idioma-container">
+            <!-- Selector de idioma -->
+            <label for="idioma-selector">Idioma:</label>
+            <select id="idioma-selector" onchange="cambiarIdioma()">
+                <option value="es">Español</option>
+                <option value="en">English</option>
+                <option value="it">Italiano</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2 id="titulo-seccion">Gestión de Vehículos</h2>
+            <p id="descripcion">Introduce la matrícula del vehículo para ver su información:</p>
+            <label for="matricula">Matrícula:</label>
+            <input type="text" id="matricula" placeholder="Introduce la matrícula">
+            <button onclick="buscarVehiculo()" id="buscar-btn">Buscar</button>
+            <div id="info-vehiculo"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p id="footer-text">&copy; 2025 Alquiber Renting Flexible. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="vehiculos.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
