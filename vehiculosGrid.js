@@ -19,7 +19,7 @@ let vehiculos = [
     {matricula: '1812MYZ', puesto: 17},
     {matricula: '1900MYZ', puesto: 18},
     {matricula: '0000***', puesto: 19},
-    {matricula: '6305MDJ', puesto: 20,  
+    {matricula: '6305MDJ', puesto: 20,}
     {matricula: '9009MDD', puesto: 21},
     {matricula: '8957MDD', puesto: 22},
    
