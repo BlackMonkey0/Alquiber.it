@@ -1,7 +1,7 @@
 const traducciones={
     es: {
         titulo: "Alquiber Renting Flexible",
-        contenido: "Bienvenidos a la gestión de vehículos",
+        contenido: "TALLER ALQUINBER ITALIA",
         idioma: "Idioma:",
         mecanico: "Mecánico:",
         reparacion: "Reparación:",
@@ -18,7 +18,7 @@ const traducciones={
     },
     en: {
         titulo: "Alquiber Flexible Renting",
-        contenido: "Welcome to vehicle management",
+        contenido: "ALQUIBER ITALY WORKSHOP",
         idioma: "Language:",
         mecanico: "Mechanic:",
         reparacion: "Repair:",
@@ -35,7 +35,7 @@ const traducciones={
     },
     it: {
         titulo: "Alquiber Noleggio Flessibile",
-        contenido: "Benvenuti nella gestione dei veicoli",
+        contenido: "OFFICINA ALQUIBER ITALIA",
         idioma: "Lingua:",
         mecanico: "Meccanico:",
         reparacion: "Riparazione:",
