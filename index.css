@@ -20,21 +20,42 @@ body {
 
 /* Header */
 header {
-    width: 100%;
-    background-color: #ff0000;
-    color: white;
-    padding: 5px 0; /* Reduce el padding para hacerlo más estrecho */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    position: fixed; /* Fija el header en la parte superior */
-    top: 0; /* Asegura que esté en la parte superior */
-    left: 0;
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añade una sombra para destacar */
+    padding: 20px 0;
+    background-color: var(--color-primary);
+    color: #fff;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
     margin: 0;
-    font-size: 16px; /* Reduce el tamaño del texto */
+    font-size: 2rem;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+header nav ul li a:hover,
+header nav ul li a:focus-visible {
+    text-decoration: underline;
 }
 
 #idioma-container {
@@ -68,7 +89,7 @@ header h1 {
 
     #idioma-container {
         width: 100%;
-        justify-content: space-evenly; /* Espaciado igual entre los elementos */
+        justify-content: space-evenly;
         padding-top: 10px;
     }
 }
@@ -103,10 +124,10 @@ nav ul li a {
 
 /* Main content */
 main {
-    margin-top: 70px; /* Incrementa el margen superior para evitar que el contenido quede oculto detrás del header */
+    margin-top: 70px;
     width: 90%;
     max-width: 800px;
-    margin: 70px auto 20px; /* Ajusta el margen superior e inferior */
+    margin: 70px auto 20px;
     background: white;
     padding: 20px;
     border-radius: 10px;
@@ -128,30 +149,38 @@ form {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 form label {
     font-weight: bold;
     color: #555;
+    text-align: left;
+    margin-bottom: -10px;
 }
 
 form input {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    width: 100%;
 }
 
 form button {
-    padding: 10px;
+    padding: 12px;
     background-color: #ff0000;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    align-self: center;
+    width: 100%;
 }
 
 form button:hover {
-    background-color: #ff0000;
+    background-color: #cc0000;
 }
 
 /* Botones */
