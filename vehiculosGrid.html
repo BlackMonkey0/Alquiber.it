@@ -3,31 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de Vehículos</title>
-    <link rel="stylesheet" href="vehiculosgrid.css">
+    <title class="traducible" data-key="tituloPagina">Gestión de Vehículos</title>
+    <link rel="stylesheet" href="vehiculosGrid.css">
+
+    <!-- Traducción -->
+    <script src="traductor.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Gestión de Vehículos</h1>
+        <h1 class="traducible" data-key="gestionVehiculos">Gestión de Vehículos</h1>
     </header>
     
     <nav>
         <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="vehiculos.html">Vehículos</a></li>
+            <li><a class="traducible" data-key="inicio" href="index.html">Inicio</a></li>
+            <li><a class="traducible" data-key="vehiculos" href="vehiculos.html">Vehículos</a></li>
         </ul>
     </nav>
     
     <main>
-        <h2>Registro de Vehículos</h2>
+        <h2 class="traducible" data-key="registroVehiculos">Registro de Vehículos</h2>
+        
         <div class="busqueda">
-            <input type="text" id="buscarVehiculo" placeholder="Buscar matrícula...">
-            <button onclick="buscarVehiculo()">Buscar</button>
+            <input type="text" id="buscarVehiculo" placeholder="Buscar matrícula..." class="traducible" data-key="placeholderBuscar">
+            <button onclick="buscarVehiculo()" class="traducible" data-key="buscarBtn">Buscar</button>
         </div>
         
         <div class="parking-lot" id="parkingLot"></div>
     </main>
 
+    <footer>
+        <p id="footer-text" class="traducible" data-key="footer">© 2025 Alquiber Renting Flexible. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- JS -->
     <script src="vehiculosGrid.js" defer></script>
 </body>
 </html>
