@@ -107,7 +107,7 @@ const vehiculos = {
     "4592MWM": {marca:  "VOLKSWAGEN", modelo: "CADDY", año: 2024, combustible: "DIESEL"},
     "0": {marca: "IVECO", modelo: "DAILY", año: 0,combustible: "DIESEL"},
     "8614MCJ": { marca: "LEXUS", modelo: "UX 250H",
-                año: 2022, combustible: "HIBRIDO",
+                año: 2022, combustible: "Gasolina",
                 km:51.420, matriculasVinculadas: ["8614MCJ", "0"]},
     "4134MRK": { marca: "NISSAN", modelo: "X-TRAIL", año: 2024, combustible: "HIBRIDO"},
     "8794LZX": {marca: "OPEL", modelo: "CORSA", año: 2022, combustible: "GASOLINA"},
