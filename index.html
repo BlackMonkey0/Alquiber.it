@@ -1,181 +1,85 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title id="titulo-pagina">Gestión de Taller - Alquiber Renting Flexible</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        header {
-            width: 100%;
-            background-color: #ff0000;
-            color: white;
-            padding: 5px 0; 
-            text-align: center;
-            position: fixed; 
-            top: 0;
-            left: 0;
-            z-index: 1000; 
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alquiber Renting Flexible</title>
 
-        
-        header h1 {
-            margin: 0;
-            font-size: 16px; 
-        }
+    <!-- Enlace a tu CSS -->
+    <link rel="stylesheet" href="index.css">
 
-        
-        main {
-            margin-top: 70px; 
-            width: 90%;
-            max-width: 800px;
-            margin: 70px auto 20px; 
-            background: rgb(255, 255, 255);
-            padding: 20px;
-            border-radius: 10px;      
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }   
-    </style>
+    <!-- Enlace a jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
+
 <body>
+    <!-- Encabezado -->
     <header>
-        <div>
-            <h1 id="titulo">Alquiber Renting Flexible</h1>
-        </div>
+        <h1 id="titulo" class="traducible" data-key="titulo">Alquiber Renting Flexible</h1>
         <nav>
             <ul>
-                <li><a href="vehiculos.html" id="vehiculos" aria-label="Ir a la página de Vehículos">Vehículos</a></li>
-                <li><a href="vehiculosGrid.html" id="vehiculosGrid" aria-label="Ir a la página de Orden">Orden</a></li>
+                <li><a class="traducible" data-key="inicio" href="vehiculosGrid.html">Orden</a></li>
+                <li><a class="traducible" data-key="vehiculos" href="vehiculos.html">Vehículos</a></li>
             </ul>
         </nav>
-        <div id="idioma-container">
-            <label for="idioma-selector" id="idioma-label">Idioma:</label>
-            <select id="idioma-selector" onchange="cambiarIdioma()">
-                <option value="es" lang="es">Español</option>
-                <option value="en" lang="en">English</option>
-                <option value="it" lang="it">Italiano</option>
-            </select>
-        </div>
     </header>
 
-    <main>
-        <h2 id="contenido">Bienvenidos a la gestión de vehículos</h2>
+    <!-- Resto del contenido -->
+    <p id="contenido" class="traducible" data-key="contenido">Bienvenidos a la gestión de vehículos</p>
 
-        <!-- Contenido de vehículo y mantenimiento -->
-        <section id="info-vehiculo">
-            <form id="mantenimiento-form">
-                <label for="mecanico" id="label-mecanico">Mecánico:</label>
-                <input type="text" id="mecanico" required>
+    <!-- Selector de idioma -->
+    <label for="idioma-selector" class="traducible" data-key="idioma">Idioma:</label>
+    <select id="idioma-selector">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+        <option value="it">Italiano</option>
+    </select>
 
-                <label for="reparacion" id="label-reparacion">Reparación:</label>
-                <input type="text" id="reparacion" required>
+    <!-- Formulario de mantenimiento -->
+    <form id="mantenimiento-form">
+        <label id="label-mecanico" for="mecanico" class="traducible" data-key="mecanico">Mecánico:</label>
+        <input type="text" id="mecanico" required><br>
 
-                <label for="matricula" id="label-matricula">Matrícula:</label>
-                <input type="text" id="matricula" required>
+        <label id="label-reparacion" for="reparacion" class="traducible" data-key="reparacion">Reparación:</label>
+        <input type="text" id="reparacion" required><br>
 
-                <label for="km" id="label-km">Kilómetros:</label>
-                <input type="number" id="km" required>
+        <label id="label-matricula" for="matricula" class="traducible" data-key="matricula">Matrícula:</label>
+        <input type="text" id="matricula" required><br>
 
-                <button type="submit" id="guardar-btn">Guardar</button>
-            </form>
+        <label id="label-km" for="km" class="traducible" data-key="kilometros">Kilómetros:</label>
+        <input type="number" id="km" required><br>
 
-            <button type="button" id="descargar-pdf">Descargar PDF Mantenimiento</button>
-            <button type="button" id="borrar-registros">Borrar Registros</button>
-        </section>
+        <button id="guardar-btn" type="submit" class="traducible" data-key="guardar">Guardar</button>
+    </form>
 
-        <!-- Gestión de cámara -->
-        <section id="camara-section">
-            <h2 id="camara-titulo">Gestión de Cámara</h2>
-            <button type="button" id="activar-camara">Activar Cámara</button>
-            <button type="button" id="cambiar-camara">Cambiar Cámara</button>
-            <button type="button" id="desactivar-camara">Desactivar Cámara</button>
-            <div id="camara-container">
-                <video id="video-camara" width="320" height="240" autoplay></video>
-                <canvas id="canvas" width="320" height="240" style="display:none;"></canvas>
-                <button type="button" id="tomar-foto">Tomar Foto</button>
-            </div>
-        </section>
-    </main>
+    <!-- Botón para descargar el PDF -->
+    <button id="descargar-pdf" class="traducible" data-key="descargarPdf">Descargar PDF Mantenimiento</button>
 
+    <!-- Sección para la cámara -->
+    <h2 id="camara-titulo" class="traducible" data-key="camaraTitulo">Gestión de Cámara</h2>
+    <button id="activar-camara" class="traducible" data-key="activarCamara">Activar Cámara</button>
+    <button id="cambiar-camara" class="traducible" data-key="cambiarCamara">Cambiar Cámara</button>
+    <button id="desactivar-camara" class="traducible" data-key="desactivarCamara">Desactivar Cámara</button>
+    <button id="tomar-foto" class="traducible" data-key="tomarFoto">Tomar Foto</button>
+
+    <video id="video-camara" width="640" height="480" autoplay></video>
+    <canvas id="canvas" style="display: none;"></canvas>
+    <img id="foto" src="" style="display: none;" alt="Foto tomada">
+
+    <!-- Sección de historial de mantenimiento -->
+    <h3>Historial de Mantenimiento</h3>
+    <ul id="historialMantenimiento"></ul>
+
+    <!-- Footer -->
     <footer>
-        <p id="footer-text">© 2025 Alquiber Renting Flexible. Todos los derechos reservados.</p>
-        <div id="reloj-container">
-            <span id="reloj"></span>
-        </div>
+        <p id="footer-text" class="traducible" data-key="footer">© 2025 Alquiber Renting Flexible. Todos los derechos reservados.</p>
     </footer>
 
-    <noscript>
-        <p>Este sitio requiere JavaScript para funcionar correctamente. Por favor, habilítalo en tu navegador.</p>
-    </noscript>
+    <!-- Enlazamos los scripts -->
+    <script src="index.css"></script>  <!-- Traducción de idiomas -->
+    <script src="traductor.js"></script>     <!-- Lógica de la aplicación -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-   
-    <script>
-        const traducciones = {
-            es: {
-                titulo: "Gestión de Taller - Alquiber Renting Flexible",
-                contenido: "Bienvenidos a la gestión de vehículos",
-                vehiculos: "Vehículos",
-                orden: "Orden",
-                idioma: "Idioma:",
-                mecanico: "Mecánico:",
-                reparacion: "Reparación:",
-                matricula: "Matrícula:",
-                kilometros: "Kilómetros:",
-                guardar: "Guardar",
-                descargarPdf: "Descargar PDF Mantenimiento",
-                borrarRegistros: "Borrar Registros",
-                camaraTitulo: "Gestión de Cámara",
-                activarCamara: "Activar Cámara",
-                cambiarCamara: "Cambiar Cámara",
-                desactivarCamara: "Desactivar Cámara",
-                tomarFoto: "Tomar Foto",
-                footer: "© 2025 Alquiber Renting Flexible. Todos los derechos reservados."
-            },
-            en: {
-                titulo: "Workshop Management - Alquiber Flexible Renting",
-                contenido: "Welcome to vehicle management",
-                vehiculos: "Vehicles",
-                orden: "Order",
-                idioma: "Language:",
-                mecanico: "Mechanic:",
-                reparacion: "Repair:",
-                matricula: "License Plate:",
-                kilometros: "Kilometers:",
-                guardar: "Save",
-                descargarPdf: "Download Maintenance PDF",
-                borrarRegistros: "Delete Records",
-                camaraTitulo: "Camera Management",
-                activarCamara: "Activate Camera",
-                cambiarCamara: "Switch Camera",
-                desactivarCamara: "Deactivate Camera",
-                tomarFoto: "Take Photo",
-                footer: "© 2025 Alquiber Flexible Renting. All rights reserved."
-            },
-            it: {
-                titulo: "Gestione Officina - Alquiber Noleggio Flessibile",
-                contenido: "Benvenuti nella gestione dei veicoli",
-                vehiculos: "Veicoli",
-                orden: "Ordine",
-                idioma: "Lingua:",
-                mecanico: "Meccanico:",
-                reparacion: "Riparazione:",
-                matricula: "Targa:",
-                kilometros: "Chilometri:",
-                guardar: "Salva",
-                descargarPdf: "Scarica PDF Manutenzione",
-                borrarRegistros: "Elimina Registri",
-                camaraTitulo: "Gestione della Fotocamera",
-                activarCamara: "Attiva Fotocamera",
-                cambiarCamara: "Cambia Fotocamera",
-                desactivarCamara: "Disattiva Fotocamera",
-                tomarFoto: "Scatta Foto",
-                footer: "© 2025 Alquiber Noleggio Flessibile. Tutti i diritti riservati."
-            }
-        };
-        
-    </script>
-     <script src="main.js"></script>
 </body>
+
 </html>
