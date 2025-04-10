@@ -15,7 +15,7 @@ let vehiculos = [
     { matricula: '8593MWR', puesto: 13, VIN:'KJ6R521325' },
     { matricula: '8407MWR', puesto: 14, VIN:'KJ3SR521119'},
     { matricula: '7769MWR', puesto: 15, VIN: 'KJ5SR521242'},
-    { matricula: '8887MWR', puesto: 16, VIN: 'KJ5SR521137},
+    { matricula: '8887MWR', puesto: 16, VIN: 'KJ5SR521137'},
     { matricula: '1812MYZ', puesto: 17, VIN: 'ER54RT40808'},
     { matricula: '1900MYZ', puesto: 18, VIN: 'ER64RT44446'},
     { matricula: '0000***', puesto: 19, VIN: 'A60D757171' },
