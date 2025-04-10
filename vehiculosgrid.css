@@ -39,6 +39,7 @@ nav ul li a:hover {
 main {
     padding: 2rem;
     text-align: center;
+    padding-bottom: 4rem; /* Reserva espacio para el footer */
 }
 
 .busqueda {
@@ -75,34 +76,62 @@ main {
 }
 
 .puesto {
-    width: 100px;
-    height: 100px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
+    width: 90px; /* Ajusta el ancho del recuadro */
+    height: 90px; /* Ajusta la altura del recuadro */
+    border: 1px solid #ccc; /* Borde para delimitar el recuadro */
+    border-radius: 5px; /* Bordes redondeados */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #f9f9f9;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para un efecto visual */
+    padding: 10px;
+    text-align: center;
+    margin: 10px; /* Espaciado entre recuadros */
 }
 
 .puesto.ocupado {
-    background-color: #ffcccc;
+    background-color: #ffe6e6; /* Fondo para puestos ocupados */
     border-color: #ff0000;
 }
 
 .puesto.libre {
-    background-color: #ccffcc;
+    background-color: #e6ffe6; /* Fondo para puestos libres */
     border-color: #00ff00;
 }
 
 .puesto.resaltado {
-    border: 3px solid #ff0000;
+    border: 2px solid #ff0000; /* Resalta el recuadro */
     background-color: #e0f7ff;
 }
 
+.puesto span,
+.puesto .matricula,
+.puesto .vin {
+    display: block;
+    font-size: 0.8rem;
+    margin-top: 2px;
+}
+
 .puesto span {
-    font-size: 0.9rem;
-    text-align: center;
+    font-size: 0.8rem; /* Tamaño de texto más pequeño */
+    color: #333; /* Color del texto */
+}
+
+.puesto .vin {
+    font-size: 0.7rem;
+    color: #555;
+}
+
+footer {
+    background-color: #ff0000; /* Fondo rojo */
+    color: white; /* Texto blanco para contraste */
+    text-align: center; /* Centra el contenido */
+    padding: 1rem; /* Espaciado interno */
+    position: fixed; /* Fija el pie de página */
+    bottom: 0; /* Lo coloca en la parte inferior */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Sombra para un efecto visual */
+    z-index: 1000; /* Asegura que el footer esté por encima del contenido */
 }
